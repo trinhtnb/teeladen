@@ -1,0 +1,153 @@
+/* PC */
+@media (min-width: 1024px) {
+    .hide-on-pc {
+        display: none;
+    }
+}
+
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .hide-on-mob-tab {
+        display: none;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-subcribe__body {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 48px;
+    }
+
+    .footer-subcribe__content {
+        margin-bottom: 12px;
+        padding-right: 0px;
+    }
+
+    .footer-subcribe__box {
+        width: 80%;
+    }
+    
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .service-item__name {
+        margin-top: 12px;
+    }
+
+    .service-item__icon {
+        margin-right: 0px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tab {
+        display: none;
+    }
+    
+    .headbar__search {
+        margin: 12px;
+    }   
+    
+    .headbar__logo-link {
+        transform: scale(0.8);
+    }
+
+    .headbar__cart-notice {
+        top: -3px;
+    }
+
+
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mob {
+        display: none;
+    }
+
+    .hearder {
+        background-color: var(--light-gray-color);
+    }
+
+    .headbar__logo-link {
+        transform: scale(0.6);
+    }
+
+    .flex_1st {
+        order: 1;
+    }
+
+    .flex_2nd {
+        order: 2;
+    }
+
+    .flex_3rd {
+        order: 4;
+    } 
+    
+    .flex_4th {
+        order: 3;
+    }
+
+    .headbar__logo-link,
+    .headbar__account-wrap,
+    .headbar__cart-wrap,
+    .headbar-search_wrap {
+       height: initial; 
+    }
+
+    .headbar {
+        height: 120px;
+    }
+
+    .headbar__search {
+        margin: 0 12px;
+    }
+
+    .nav-mobile-btn {
+        line-height: 62px;
+        text-align: left;
+        margin-left: 24px;
+    }
+
+    .headbar__cart-wrap {
+        height: 62px;
+        line-height: 62px;
+        justify-content: right;
+        margin-right: 24px;
+    }
+
+    .headbar__cart-notice{
+        top: 3px;
+    }
+    
+    .service-item {
+        margin-top: 12px;
+    }
+
+    /* Footer */
+
+    .brand-section__background {
+        font-size: 3.2rem;
+    }
+
+    .footer-subcribe__body {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+    .footer-item__heading {
+        margin-top: 48px;
+    }
+
+}

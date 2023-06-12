@@ -1,0 +1,218 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --dark-gray-color: #6b7269;
+    --medium-gray-color: #b6b6b6;
+    --light-gray-color: #eaeaea;
+    --background-color: #fafafa;
+    --primary-color:#2b6d42;
+    --emphasis-color: #c8653b;
+    --light-text-weight: 300;
+    --medium-text-weight: 500;
+    --bold-text-weight: 700;
+
+    --header-height: 160px;
+    --header-navbar-height: 52px;
+    --header-headbar-height: calc(var(--header-height) - var(--header-navbar-height));
+
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.8rem;
+    font-family: 'Marcellus', serif;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    font-weight: var(--medium-text-weight);
+    color: var(--dark-gray-color);
+}
+
+/* Text style */
+
+h2 {
+    font-family: 'Marcellus', serif;
+    font-weight: var(--medium-text-weight);
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin: 24px 0 16px 0;
+    line-height: 4.2rem;
+}
+
+h3 {
+    font-family: 'Marcellus', serif;
+    font-weight: var(--medium-text-weight);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 16px 0;
+    line-height: 2.2rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+span, p, h5  {
+    font-size: 1.4rem;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    100% { opacity: 1; }
+    0% { opacity: 0; }
+}
+
+/* Modal */
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+.modal  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body-center {
+    --growth-from: 0.7;
+    --growth-to: 1;
+    width: 500px;
+    background: var(--white-color);
+    border-radius: 4px;
+    margin: auto;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+
+.modal__inner {
+    margin: 32px;
+}
+
+/* Button */
+
+.btn {
+    min-width: 140px;
+    height: 40px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: var(--medium-text-weight);
+    background-color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn.btn--primary {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--disabled {
+    background: var(--light-gray-color);
+    color: var(--medium-gray-color);
+    border: none;
+    cursor: default;
+
+}
+
+/* Tag */
+
+.tag--size-s {
+    height: 32px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: var(--medium-text-weight);
+    color: var(--dark-gray-color);
+    cursor: pointer;
+}
+
+.tag--size-s:hover {
+    color: var(--primary-color);
+    font-weight: var(--bold-text-weight);
+}
+
+/* Checkbox */
+
+.cus-checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.4rem;
+    user-select: none;
+}
+
+.cus-checkbox input {
+    visibility: hidden;
+    height: 0;
+    width: 28px;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--white-color);
+    border: 1px solid var(--dark-gray-color);
+    border-radius: 2px;
+    box-shadow: inset 2px 2px 4px var(--light-gray-color);
+}
+
+.cus-checkbox input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border: none;
+    box-shadow: none;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.cus-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.cus-checkbox .checkmark:after {
+    top: 4px;
+    left: 8px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
