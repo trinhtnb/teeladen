@@ -11,6 +11,10 @@
     .hide-on-mob-tab {
         display: none;
     }
+    
+    .headbar__search {
+        margin: 0 12px 12px;
+    }  
 
     .footer-info {
         text-align: center;
@@ -51,10 +55,6 @@
     .hide-on-tab {
         display: none;
     }
-    
-    .headbar__search {
-        margin: 12px;
-    }   
     
     .headbar__logo-link {
         transform: scale(0.8);
@@ -109,10 +109,6 @@
         height: 120px;
     }
 
-    .headbar__search {
-        margin: 0 12px;
-    }
-
     .nav-mobile-btn {
         line-height: 62px;
         text-align: left;
@@ -127,11 +123,14 @@
     }
 
     .headbar__cart-notice{
-        top: 3px;
+        top: 4px;
+        right: -7px;
+        font-size: 0.6rem;
+        border: 2px solid var(--light-gray-color);
     }
-    
+
     .service-item {
-        margin-top: 12px;
+        margin-top: 24px;
     }
 
     /* Footer */
@@ -150,4 +149,7 @@
         margin-top: 48px;
     }
 
+    .footer-copyright__text {
+        font-size: 1.2rem;
+    }
 }

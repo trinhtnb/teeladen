@@ -86,6 +86,10 @@
     max-width: 100%;
 }
 
+
+@media (max-width: 740px) {
+
+}
 /* Tablet */
 
 @media (min-width: 740px) and (max-width: 1023px) {
